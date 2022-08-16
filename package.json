@@ -1,0 +1,11 @@
+{
+  "name": "eagendaweb",
+  "version": "1.0.0",
+  "description": "EAgenda em Web",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --w"
+  },
+  "author": "Anderson Silva",
+  "license": "ISC"
+}
