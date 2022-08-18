@@ -10,11 +10,11 @@
   
   
   
-  <title>Tarefas - eAgenda Web</title>
-  <script type="module" crossorigin src="/e-agenda-vite/assets/tarefaCreate.e836216b.js"></script>
+  <title>Contato - eAgenda Web</title>
+  <script type="module" crossorigin src="/e-agenda-vite/assets/contatoList.aa743bfd.js"></script>
   <link rel="modulepreload" crossorigin href="/e-agenda-vite/assets/style.c0ed6924.js">
   <link rel="modulepreload" crossorigin href="/e-agenda-vite/assets/entidade.model.b604f7d9.js">
-  <link rel="modulepreload" crossorigin href="/e-agenda-vite/assets/tarefa.repository.local-storage.25265096.js">
+  <link rel="modulepreload" crossorigin href="/e-agenda-vite/assets/contato.repository.local-storage.f3c04ceb.js">
   <link rel="stylesheet" href="/e-agenda-vite/assets/style.89750ef0.css">
 </head>
 <body class="bg-dark">
@@ -37,7 +37,7 @@
               Cadastros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item active bg-primary" href="./tarefa.list.html">Tarefas</a></li>
+              <li><a class="dropdown-item active bg-primary" href="../tarefas/tarefa.list.html">Tarefas</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="../contatos/contato.list.html">Contatos</a></li>
             </ul>
@@ -55,39 +55,34 @@
     <div class="row w-75 text-center text-md-start p-0 p-md-5">
       <section id="cabecalho">
         <header>
-          <h1 class="title text-light fw-bold">Cadastrar Tarefa</h1>
-          <p class="fs-5 mt-3 text-warning fw-semibold">Cadastre suas tarefas diárias por prioridade.</p>
+          <h1 class="title text-light fw-bold">Cadastrar Contato</h1>
+          <p class="fs-5 mt-3 text-warning fw-semibold">Cadastre seus Contatos.</p>
         </header>
         <div class="card text-bg-dark border-secondary p-0 p-md-2 mt-4 d-flex">
-          <div class="card-body p-5">
-            <form class="form text-bg-dark mt-3" id="formulario">
+            <div class="card-body p-5">
+              <form class="form text-bg-dark mt-3" id="formulario">
 
-              <div class="form-group">
-                <label class="form-label fs-5" for="txtDescricao">Descrição</label>
-                <input id="txtDescricao" class="form-control" type="text" placeholder="Descrição da sua tarefa">
+              <div class="form-group mb-3">
+                <label class="form-label fs-5" for="txtNomeContato">Nome</label>
+                <input id="txtNomeContato" class="form-control" type="text" placeholder="Nome do Contato">
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label fs-5" for="txtEmail">E-mail</label>
+                <input id="txtEmail" class="form-control" type="text" placeholder="Email do Contato">
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label fs-5" for="txtTelefone">Telefone</label>
+                <input id="txtTelefone" class="form-control" type="text" placeholder="Telefone do Contato">
               </div>
 
-              <div class="form-group mt-4">
-                <label class="form-label fs-5" for="rdbPrioridade">Prioridade</label>
-                
-                <div class="form-check">
-                  <input class="form-check-input" value="Baixa" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Baixa
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" value="Média" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Média
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" value="Alta" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Alta
-                  </label>
-                </div>
+              <div class="form-group mb-3">
+                <label class="form-label fs-5" for="txtEmpresa">Empresa</label>
+                <input id="txtEmpresa" class="form-control" type="text" placeholder="Empresa do Contato">
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="form-label fs-5" for="txtCargo">Cargo</label>
+                <input id="txtCargo" class="form-control" type="text" placeholder="Cargo do Contato">
               </div>
             </form>
           </div>
@@ -96,7 +91,6 @@
           </div>
         </div>
       </section>
-
     </div>
   </main>
 </body>
