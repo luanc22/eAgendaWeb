@@ -1,3 +1,3 @@
-export interface IPaginaHTML{
+export interface IPaginaHTML {
   configurarElementos(): void;
 }

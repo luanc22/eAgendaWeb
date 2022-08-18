@@ -1,3 +1,3 @@
-export interface IPaginaListagem{
-  atualizarTabela(): void ;
+export interface IPaginaListagem {
+  atualizarTabela(): void;
 }

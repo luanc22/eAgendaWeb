@@ -1,17 +1,15 @@
 import { IPaginaHTML } from "./shared/pagina.interface.js";
- 
- class Index implements IPaginaHTML {
 
-  btnCadastroTarefa: HTMLButtonElement;
+class Index implements IPaginaHTML {
+  btnCadastrar: HTMLButtonElement;
 
   constructor() {
-    
+
     this.configurarElementos();
   }
 
-  //metodo responsavel pelo dataBiding dos elementos da página
-  public configurarElementos(): void {
-   }
+  // método responsável pelo data binding dos elementos da página
+  public configurarElementos(): void { }
 
 }
 

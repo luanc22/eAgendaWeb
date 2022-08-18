@@ -1,9 +1,9 @@
 import { Guid } from "./guid.model.js";
 
-export abstract class EntidadeBase{
-  public id: string = new Guid ().gerarNovoId();
+export abstract class EntidadeBase {
+  public id: string;
 
-  constructor(){
+  constructor() {
     this.id = new Guid().gerarNovoId();
   }
 }

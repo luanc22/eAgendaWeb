@@ -24,6 +24,11 @@
   background-color: #ffc107c8 !important;
 }
 
+.navsep{
+  border-left-width: 2px;
+  border-color: #fff;
+}
+
 tbody > tr:hover > * {
   background-color: #ffff !important;
   color: black !important;

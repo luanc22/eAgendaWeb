@@ -1,3 +1,3 @@
-export interface IRepositorioSerializavel{
-  gravar(): void; 
+export interface IRepositorioSerializavel {
+  gravar(): void;
 }
