@@ -1,4 +1,4 @@
-# eAgendaWeb
+# e-Agenda Web
 Agenda para organização feita em web onde você pode salvar contatos e tarefas!
 
 Site para utilizar: https://luanc22.github.io/eAgendaWeb/
