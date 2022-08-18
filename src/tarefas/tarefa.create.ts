@@ -1,9 +1,9 @@
-import { IPaginaFormulario } from "../shared/pagina.create.interface.js";
-import { IPaginaHTML } from "../shared/pagina.interface.js";
-import { IRepositorio } from "../shared/repositorio.interface.js";
-import { Prioridade } from "./prioridade.enum.js";
-import { Tarefa } from "./tarefa.model.js";
-import { TarefaRepositoryLocalStorage } from "./tarefa.repository.local-storage.js";
+import { IPaginaFormulario } from "../shared/pagina.create.interface";
+import { IPaginaHTML } from "../shared/pagina.interface";
+import { IRepositorio } from "../shared/repositorio.interface";
+import { Prioridade } from "./models/prioridade.enum";
+import { Tarefa } from "./models/tarefa.model";
+import { TarefaRepositoryLocalStorage } from "./repositories/tarefa.repository.local-storage";
 
 class TarefaPaginaCadastro implements IPaginaHTML, IPaginaFormulario {
   private txtDescricao: HTMLInputElement;

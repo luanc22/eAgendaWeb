@@ -1,34 +1,35 @@
-import { IPaginaHTML } from "../shared/pagina.interface";
-import { IPaginaListagem } from "../shared/pagina.list.interface";
-import { IRepositorio } from "../shared/repositorio.interface";
-import { Tarefa } from "./models/tarefa.model";
-import { TarefaRepositoryLocalStorage } from "./repositories/tarefa.repository.local-storage";
+import { IPaginaHTML } from "../shared/pagina.interface.js";
+import { IPaginaListagem } from "../shared/pagina.list.interface.js";
+import { IRepositorio } from "../shared/repositorio.interface.js";
+import { Contato } from "./models/contato.model.js";
+import { ContatoRepositoryLocalStorage } from "./repositories/contato.repository.local-storage.js";
 
-class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem {
+class ContatoPaginaListagem implements IPaginaHTML,IPaginaListagem{
   tabela: HTMLTableElement;
-
-  constructor(private repositiorioTarefas: IRepositorio<Tarefa>) {
+  
+  constructor(private repositorioContatos: IRepositorio<Contato>){
     this.configurarElementos();
     this.atualizarTabela();
   }
-
+  
+  
   configurarElementos(): void {
     this.tabela = document.getElementById("tabela") as HTMLTableElement;
   }
 
   atualizarTabela(): void {
-    const tarefas = this.repositiorioTarefas.selecionarTodos();
+    const contatos = this.repositorioContatos.selecionarTodos();
 
     let corpoTabela = this.tabela.getElementsByTagName("tbody")[0];
 
-    tarefas.forEach(tarefa => {
+    contatos.forEach(contato => {
       const novaLinha = corpoTabela.insertRow();
 
-      Object.values(tarefa).forEach((valor: any) => {
+      Object.values(contato).forEach((valor: any) => {
         const novaCelula = novaLinha.insertCell();
 
         novaCelula.innerText = valor;
-      });
+      })
 
       const celulaBotoes = novaLinha.insertCell();
 
@@ -37,10 +38,10 @@ class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem {
       btnEditar.className = "btn btn-primary me-1"
 
       btnEditar.addEventListener("click", () => {
-        const idSelecionado = tarefa.id;
+        const idSelecionado = contato.id;
 
         // query parameter
-        window.location.href = `tarefa.create.html?id=${idSelecionado}`;
+        window.location.href = `contato.create.html?id=${idSelecionado}`;
       });
 
       const btnExcluir = document.createElement("a");
@@ -48,17 +49,17 @@ class TarefaPaginaListagem implements IPaginaHTML, IPaginaListagem {
       btnExcluir.className = "btn btn-outline-warning"
 
       btnExcluir.addEventListener("click", () => {
-        const idSelecionado = tarefa.id;
+        const idSelecionado = contato.id;
 
-        this.repositiorioTarefas.excluir(idSelecionado);
+        this.repositorioContatos.excluir(idSelecionado);
 
         window.location.reload();
       });
 
       celulaBotoes.appendChild(btnEditar);
       celulaBotoes.appendChild(btnExcluir);
-    });
+    })
   }
-}
+} 
 
-new TarefaPaginaListagem(new TarefaRepositoryLocalStorage());
+new ContatoPaginaListagem(new ContatoRepositoryLocalStorage());

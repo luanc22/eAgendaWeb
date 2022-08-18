@@ -1,7 +1,6 @@
-import { Guid } from "../shared/guid.model.js";
-import { IRepositorioSerializavel } from "../shared/repositorio-serializavel.interface.js";
-import { IRepositorio } from "../shared/repositorio.interface.js";
-import { Tarefa } from "./tarefa.model.js";
+import { IRepositorioSerializavel } from "../../shared/repositorio-serializavel.interface.js";
+import { IRepositorio } from "../../shared/repositorio.interface.js";
+import { Tarefa } from "../models/tarefa.model.js";
 
 export class TarefaRepositoryLocalStorage implements IRepositorio<Tarefa>, IRepositorioSerializavel {
   private readonly localStorage: Storage;
